@@ -48,9 +48,14 @@ function render(model) {
 function createInput() {
     const inputWindow = document.createElement('div')
     const inputWindowElem = document.createElement('input')
+    const inputWindowInputButton = document.createElement('Button')
 
-    inputWindowElem.className = 'rounded-lg border-2 bg-indigo-300'
+    inputWindow.className = 'm-auto mt-4 text-end'
+    inputWindowElem.className = 'rounded-lg border-2 bg-indigo-300 mr-1'
+    inputWindowInputButton.className = 'p-0.5 rounded-lg border-2 bg-indigo-300 text-sm font-bold italic'
+    inputWindowInputButton.type = 'submit'
+    inputWindowInputButton.textContent = 'Отправить дело'
 
-    inputWindow.append(inputWindowElem)
+    inputWindow.append(inputWindowElem, inputWindowInputButton)
     root.append(inputWindow)
 }
